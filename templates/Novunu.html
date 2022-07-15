@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Новини</title>
+    <link rel="stylesheet" href="../static/css/UPL.css">
+
+</head>
+<body>
+    <div id="container">
+        <div id="nav">
+            <ul>
+                <li><a href="/">Головна</a></li>
+                <li><a href="/search">Пошук</a></li>
+                <li><a href="/news">Новини</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <h2>Останні новини</h2>
+
+        {% for i in range(news[-1]-1, news[-1]-6, -1) %}
+        <div class="news">
+            <img src="../static/images/news{{news[-1]-i}}.png" class="im" alt="Новини">
+            <b>{{ news[i][2] }}</b>({{ news[i][1] }})
+            <br>{{ news[i][3] }}
+            <form action="/articleProcessing" method="post">
+                <button name="forArticle" value="{{ news[i][0] }}" type="submit">Детальніше</button>
+            </form>
+        </div>
+        {% endfor %}
+
+        <h2>Архів новин</h2>
+
+        {% for i in range(news[-1]-6, 0, -1) %}
+        <p><b>{{ news[i][2] }}</b>({{ news[i][1] }})</p>
+        <form action="/articleProcessing" method="post">
+            <button name="forArticle" value="{{ news[i][0] }}" type="submit">Детальніше</button>
+        </form>
+        {% endfor %}
+    </main>
+
+    <footer>
+        Телефон: +380-50-568-1156 <br>E-mail: uplonline@gmail.com <br> Україна, Київ<br>Лобановського 389б
+    </footer>
+</body>

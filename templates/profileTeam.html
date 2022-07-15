@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Пошук</title>
+    <link rel="stylesheet" href="../static/css/UPL.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="nav">
+            <ul>
+                <li><a href="/">Головна</a></li>
+                <li><a href="/search">Пошук</a></li>
+                <li><a href="/news">Новини</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <h2>Профіль</h2>
+        <img class="mainProfilePhoto" src="../static/images/photo.png" alt="">
+        <p>Назва: {{ profileInfo[0][1] }}</p>
+        <p>Місто: {{ profileInfo[0][2] }}</p>
+        <p>Стадіон: {{ profileInfo[0][3] }}</p>
+    </main>
+
+
+    <footer>
+        Телефон: +380-50-568-1156 <br>E-mail: uplonline@gmail.com <br> Україна, Київ<br>Лобановського 389б
+    </footer>
+</body>

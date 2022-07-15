@@ -1,0 +1,232 @@
+html,
+body {
+  height: 96%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    background: rgb(216, 245, 241);
+    font-family: Georgia;
+}
+body {
+    margin: 0;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: Georgia;
+}
+
+#container {
+    margin-top: 10px;
+}
+
+#nav{
+    height: 50px;
+}
+#nav ul{
+    margin: 0 auto;
+    padding: 2px 0 0 0;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+    text-align: center;
+    width: 100%;
+}
+ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 3px 0;
+    display: inline;
+}
+#nav ul li a{
+    padding: 0 20px;
+    line-height: 40px;
+    color: grey;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+#nav ul li a:hover, #nav ul li a.active{color:black}
+#header{
+    text-align: center;
+    font-size: 3em;
+    color: black;
+    line-height: 1.1em;
+    letter-spacing: -0.04em;
+    background-color: grey;
+}
+header{
+    background-color: grey;
+}
+footer{
+    text-align: left;
+    background-color:grey;
+    flex: 0 0 auto;
+}
+
+.rightpic {
+    float: right; /* Выравнивание по правому краю */
+    margin: 0 0 5px 5px; /* Отступы вокруг фотографии */
+   }
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+form {
+    width:auto;
+    margin:auto;
+    margin-top: 5px;
+}
+
+.news{
+    border: 0.5px solid grey;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    min-height: 120px;
+}
+
+.im {
+    float: left;
+    height: 110px;
+}
+
+.result {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.searchOption {
+    height: 75px;
+    margin-top: 10px;
+    width: 300px;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+.searchButton {
+    background: lightgreen;
+    border-color: lightgreen;
+    border-radius: 5px;
+    width: 60%;
+    height: 23px;
+}
+
+.searchButton:hover {
+    border-color: green;
+    cursor: pointer;
+    width: 65%;
+    height: 25px;
+    font-weight: bold;
+}
+
+.searchButton:active {
+    background: green;
+    width: 60%;
+    height: 23px;
+}
+
+.searchMenu div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mainProfilePhoto {
+    width: 250px;
+}
+
+.smallProfileLogo {
+    width: 20px;
+}
+
+input[id="playerSearchMenu"]:checked ~ .searchMenu .playerSearch,
+input[id="coachSearchMenu"]:checked ~ .searchMenu .coachSearch,
+input[id="teamSearchMenu"]:checked ~ .searchMenu .teamSearch {
+    display: block;
+}
+
+article {
+    display: none;
+}
+
+#articleDetailsImage {
+    float: left;
+    width: 30%;
+}
+
+
+@media (max-width: 1000px) {
+    body {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+
+    #nav ul li a {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .rightpic {
+        width: 50%;
+    }
+
+    .searchMenu div {
+        width: 45%;
+    }
+}
+
+@media (max-width: 875px) {
+    .searchMenu div {
+        width: 50%;
+    }
+}
+
+@media (max-width: 750px) {
+    body {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    #nav ul li a{
+        font-size: 13px;
+        padding: 0 5px;
+    }
+
+    .rightpic {
+        float: none;
+        width: 100%;
+    }
+
+    .searchMenu div {
+        width: 55%;
+    }
+}
+
+@media (max-width: 500px) {
+    .searchMenu div {
+        width: 60%;
+    }
+}

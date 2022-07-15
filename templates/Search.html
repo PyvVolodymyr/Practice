@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="../static/css/UPL.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="nav">
+            <ul>
+                <li><a href="/">Головна</a></li>
+                <li><a href="/search">Пошук</a></li>
+                <li><a href="/news">Новини</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper">
+    <main>
+    <h2>Пошук інформації</h2>
+
+    <div id="searching">
+        <div class="searchMenu">
+            <form action="/searching" method="post">
+                <label>
+                    <input type="search" name="request" placeholder="Пошук з бази">
+                </label>
+                <div>
+                    <button class="searchButton" name="requestType" value="players" type="submit">Пошук гравців</button>
+                    <button class="searchButton" name="requestType" value="coaches" type="submit">Пошук тренерів</button>
+                    <button class="searchButton" name="requestType" value="teams" type="submit">Пошук команд</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <h2>Результати пошуку</h2>
+    <div class="result">
+        {% for i in result %}
+        <div class="searchOption">
+            <b>{{ i[1] }}</b>
+            ({{ i[2] }})
+            <form action="/profileProcessing" method="post">
+                <button class="searchButton" name="forProfile" value="{{ i[0] }} {{ profileType }}" type="submit">Переглянути профіль</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    </main>
+
+    <footer>
+        Телефон: +380-50-568-1156 <br>E-mail: uplonline@gmail.com <br> Україна, Київ<br>Лобановського 389б
+    </footer>
+    </div>
+</body>

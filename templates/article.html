@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Новини</title>
+    <link rel="stylesheet" href="../static/css/UPL.css">
+
+</head>
+<body>
+    <div id="container">
+        <div id="nav">
+            <ul>
+                <li><a href="/">Головна</a></li>
+                <li><a href="/search">Пошук</a></li>
+                <li><a href="/news">Новини</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper">
+    <main>
+        <img id="articleDetailsImage" src="../static/images/articleDetails.png" alt="">
+        <b>{{ articleDetails[0][2] }}</b>({{ articleDetails[0][1] }})
+        {{ articleDetails[0][4] }}
+        {{ articleDetails[0][5] }}
+    </main>
+
+    <footer>
+        Телефон: +380-50-568-1156 <br>E-mail: uplonline@gmail.com <br> Україна, Київ<br>Лобановського 389б
+    </footer>
+    </div>
+</body>
